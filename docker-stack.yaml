@@ -22,6 +22,11 @@ services:
     TEXT2: Garage RSVP!
     LOGO: https://raw.githubusercontent.com/cloudyuga/rsvpapp/master/static/cloudyuga.png
     COMPANY: CloudYuga Technology Pvt. Ltd.
+   deploy:
+     replicas: 3
+     update_config:
+       parallelism: 2
+       delay: 30s
    networks:
     - rsvpnet
 
